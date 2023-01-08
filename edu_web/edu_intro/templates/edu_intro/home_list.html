@@ -1,4 +1,6 @@
 {% load static %}
+{% load embed_video_tags %}
+{% for intor in intros %}
 <!doctype html>
 <html lang="en" class="h-100">
   <head>
@@ -96,7 +98,11 @@
   <main class="px-3">
     <h1>2023 ABC 부트캠프 참여자 모집</h1>
     <p class="lead">청년친화형 기업 ESG지원사업의 일환인<br>ABC 부트캠프의 참여자를 모집합니다.</p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Ojc4vbL-frE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div>
+    <!-- {% video intro.video as youtube %}
+    <iframe width="560" height="315" src="{{ youtube.url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    {% endvideo %} -->
+  </div>
     <p class="lead">
       <a href="intro" class="btn btn-lg btn-light fw-bold border-white bg-white">자세히 보기</a>
       <a href="register" class="btn btn-lg btn-light fw-bold border-white bg-white">신청하기</a><br>
@@ -114,6 +120,6 @@
 </div>
 
 
-    
+{% endfor %}
   </body>
 </html>
