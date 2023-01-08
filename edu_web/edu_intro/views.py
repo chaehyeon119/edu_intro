@@ -9,3 +9,6 @@ def intro(request) :
 
 def register(request) :
     return render(request, 'edu_intro/register.html')
+
+def finish(request) :
+    return render(request, 'edu_intro/finish.html')
