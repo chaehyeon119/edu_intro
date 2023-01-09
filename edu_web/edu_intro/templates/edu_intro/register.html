@@ -1,61 +1,56 @@
 {% load static %}
 <!doctype html>
 <html lang="ko">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
-    <meta name="generator" content="Hugo 0.84.0">
-    <title>2023 ABC 부트캠프 신청 페이지</title>
 
-    <!-- Bootstrap core CSS -->
-<link href="{% static '/css/bootstrap.min.css'%}" rel="stylesheet" crossorigin="anonymous">
-<script src="/static/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-<link href="{% static '/css/form_validation.css'%}" rel="stylesheet">
-<script src="/static/js/form_validation.js"></script>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
+  <meta name="generator" content="Hugo 0.84.0">
+  <title>2023 ABC 부트캠프 신청 페이지</title>
 
+  <!-- Bootstrap core CSS -->
+  <link href="{% static '/css/bootstrap.min.css'%}" rel="stylesheet" crossorigin="anonymous">
+  <script src="/static/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <link href="{% static '/css/form_validation.css'%}" rel="stylesheet">
+  <script src="/static/js/form_validation.js"></script>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
 
-    <!-- Favicons -->
-<!-- <link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/docs/5.0/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
-<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico"> -->
-<meta name="theme-color" content="#7952b3">
+  <meta name="theme-color" content="#7952b3">
 
 
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
       }
+    }
+  </style>
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
 
-    
-    <!-- Custom styles for this template -->
+  <!-- Custom styles for this template -->
 
-  </head>
-  <body class="bg-light">
-    
-<div class="container">
-  <main>
-    <div class="py-5 text-center">
-      <img class="d-block mx-auto mb-4" src="" alt="" width="72" height="57">
-      <h2>2023 ABC 부트캠프 신청서</h2>
-      <!-- <p class="lead">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p> -->
-    </div>
-    <div class="row g-5">
+</head>
+
+<body class="bg-light">
+
+  <div class="container">
+    <main>
+      <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="{% static '/images/edu.jpeg'%}" alt="" width="150" height="150">
+        <h2>2023 ABC 부트캠프 신청서</h2>
+        <!-- <p class="lead">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p> -->
+      </div>
+      <div class="row g-5">
         <div class="col-md-5 col-lg-4 order-md-last">
           <h4 class="d-flex justify-content-between align-items-center mb-3">
             <span class="text-primary">신청 과정</span>
@@ -69,116 +64,84 @@
               </div>
               <span class="text-muted">3월 시작</span>
             </li>
-            <!-- <li class="list-group-item d-flex justify-content-between lh-sm">
-              <div>
-                <h6 class="my-0">Second product</h6>
-                <small class="text-muted">Brief description</small>
+
+        </div>
+        <div class="col-md-7 col-lg-8">
+          <h4 class="mb-3">인적사항</h4>
+          <form class="needs-validation" novalidate>
+            <div class="row g-3">
+              <div class="col-md-5">
+                <label for="firstName" class="form-label">이름</label>
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
               </div>
-              <span class="text-muted">$8</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between lh-sm">
-              <div>
-                <h6 class="my-0">Third item</h6>
-                <small class="text-muted">Brief description</small>
-              </div>
-              <span class="text-muted">$5</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between bg-light">
-              <div class="text-success">
-                <h6 class="my-0">Promo code</h6>
-                <small>EXAMPLECODE</small>
-              </div>
-              <span class="text-success">−$5</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between">
-              <span>Total (USD)</span>
-              <strong>$20</strong>
-            </li>
-          </ul>
-   -->
-      </div>
-      <div class="col-md-7 col-lg-8">
-        <h4 class="mb-3">인적사항</h4>
-        <form class="needs-validation" novalidate>
-          <div class="row g-3">
-            <div class="col-md-5">
-              <label for="firstName" class="form-label">이름</label>
-              <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-            </div>
-<!-- 
-            <div class="col-sm-6">
-              <label for="lastName" class="form-label"></label>
-              <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-              <div class="invalid-feedback">
-                Valid last name is required.
-              </div> -->
+
             </div>
             <div class="col-md-5 my-3">
-                <label for="country" class="form-label">학력 상태</label>
-                <select class="form-select" id="country" required>
-                  <option value="">선택</option>
-                  <option>고등학교 졸업</option>
-                  <option>대학 재학중 1학년</option>
-                  <option>대학 재학중 2학년</option>
-                  <option>대학 재학중 3학년</option>
-                  <option>대학 재학중 4학년</option>
-                  <option>대학 휴학중</option>
-                  <option>대학 중퇴</option>
-                  <option>대학 졸업</option>
-                  <option>대학원 재학중</option>
-                  <option>대학원 졸업</option>
-                  <option>기타</option>
-                </select>
-                <div class="invalid-feedback">
-                  최종 학력을 선택해주세요.
-                </div>
-
-                <div class="col-12 my-3">
-                    <label for="email" class="form-label"> 최종 학력 <span class="text-muted"></span></label>
-                    <div class="invalid-feedback">
-                      이메일로 신청 완료 메일 및 연락이 갈 예정이니 정확한 이메일을 작성해주세요.
-                    </div>
-                    <input type="email" class="form-control" id="email" placeholder="예) 한국대학교 경영학과">
-                    <div class="invalid-feedback">
-                      Please enter a valid email address for shipping updates.
-                    </div>
-                  </div>
+              <label for="country" class="form-label">학력 상태</label>
+              <select class="form-select" id="country" required>
+                <option value="">선택</option>
+                <option>고등학교 졸업</option>
+                <option>대학 재학중 1학년</option>
+                <option>대학 재학중 2학년</option>
+                <option>대학 재학중 3학년</option>
+                <option>대학 재학중 4학년</option>
+                <option>대학 휴학중</option>
+                <option>대학 중퇴</option>
+                <option>대학 졸업</option>
+                <option>대학원 재학중</option>
+                <option>대학원 졸업</option>
+                <option>기타</option>
+              </select>
+              <div class="invalid-feedback">
+                최종 학력을 선택해주세요.
               </div>
 
-              <div class="col-md-5 my-3">
-                <label for="country" class="form-label">대학 소재지</label>
-                <select class="form-select" id="country" required>
-                  <option value="">선택</option>
-                  <option>서울특별시</option>
-                  <option>부산광역시</option>
-                  <option>대구광역시</option>
-                  <option>인천광역시</option>
-                  <option>광주광역시</option>
-                  <option>대전광역시</option>
-                  <option>울산광역시</option>
-                  <option>세종특별자치시</option>
-                  <option>강원도</option>
-                  <option>경기도</option>
-                  <option>경상남도</option>
-                  <option>경상북도</option>
-                  <option>전라남도</option>
-                  <option>전라북도</option>
-                  <option>제주특별자치도</option>
-                  <option>충청남도</option>
-                  <option>충청북도</option>
-                  <option>기타</option>
-                </select>
+              <div class="col-12 my-3">
+                <label for="email" class="form-label"> 최종 학력 <span class="text-muted"></span></label>
                 <div class="invalid-feedback">
-                  Please select a valid country.
+                  이메일로 신청 완료 메일 및 연락이 갈 예정이니 정확한 이메일을 작성해주세요.
+                </div>
+                <input type="email" class="form-control" id="email" placeholder="예) 한국대학교 경영학과">
+                <div class="invalid-feedback">
+                  Please enter a valid email address for shipping updates.
                 </div>
               </div>
-  
+            </div>
+
+            <div class="col-md-5 my-3">
+              <label for="country" class="form-label">대학 소재지</label>
+              <select class="form-select" id="country" required>
+                <option value="">선택</option>
+                <option>서울특별시</option>
+                <option>부산광역시</option>
+                <option>대구광역시</option>
+                <option>인천광역시</option>
+                <option>광주광역시</option>
+                <option>대전광역시</option>
+                <option>울산광역시</option>
+                <option>세종특별자치시</option>
+                <option>강원도</option>
+                <option>경기도</option>
+                <option>경상남도</option>
+                <option>경상북도</option>
+                <option>전라남도</option>
+                <option>전라북도</option>
+                <option>제주특별자치도</option>
+                <option>충청남도</option>
+                <option>충청북도</option>
+                <option>기타</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid country.
+              </div>
+            </div>
+
             <div class="col-12 my-3">
               <label for="username" class="form-label">전화번호</label>
               <div class="input-group has-validation">
                 <span class="input-group-text">☎</span>
                 <input type="text" class="form-control" id="username" placeholder="예) 010-0000-0000" required>
-              <div class="invalid-feedback">
+                <div class="invalid-feedback">
                   Your username is required.
                 </div>
               </div>
@@ -232,56 +195,56 @@
               <div class="invalid-feedback">
                 거주지역을 선택해주세요.
 
-                
+
               </div>
             </div>
 
             <div class="col-md-5 my-3">
-                <label for="country" class="form-label">유사 교육 수강 여부</label>
-                <select class="form-select" id="country" required>
-                  <option value="">선택</option>
-                  <option>있음</option>
-                  <option>없음</option>
-                </select>
-                <div class="invalid-feedback">
-                  Please select a valid country.
-  
-                  
-                </div>
+              <label for="country" class="form-label">유사 교육 수강 여부</label>
+              <select class="form-select" id="country" required>
+                <option value="">선택</option>
+                <option>있음</option>
+                <option>없음</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid country.
+
+
               </div>
-              <div class="col-md-5 my-3">
-                <label for="country" class="form-label">신청 경로</label>
-                <select class="form-select" id="country" required>
-                  <option value="">선택</option>
-                  <option>지인 추천</option>
-                  <option>네이버 카페</option>
-                  <option>에브리타임</option>
-                  <option>인스타그램/페이스북</option>
-                  <option>대학 정보 이메일/문자</option>
-                  <option>대학 게시판</option>
-                  <option>홍보 포스터</option>
-                  <option>버스 정류장</option>
-                  <option>기타</option>
-                </select>
-                <div class="invalid-feedback">
-                  신청 경로를 선택해주세요.
-                  </div>
-                </div>
-            
-          <hr class="my-5">
+            </div>
+            <div class="col-md-5 my-3">
+              <label for="country" class="form-label">신청 경로</label>
+              <select class="form-select" id="country" required>
+                <option value="">선택</option>
+                <option>지인 추천</option>
+                <option>네이버 카페</option>
+                <option>에브리타임</option>
+                <option>인스타그램/페이스북</option>
+                <option>대학 정보 이메일/문자</option>
+                <option>대학 게시판</option>
+                <option>홍보 포스터</option>
+                <option>버스 정류장</option>
+                <option>기타</option>
+              </select>
+              <div class="invalid-feedback">
+                신청 경로를 선택해주세요.
+              </div>
+            </div>
 
-          <h4 class="mb-3"> 지원서 작성 </h4>
+            <hr class="my-5">
 
-          <div class="my-1">
-            <label for="cc-name" class="form-label my-3">1. 지원 동기</label>
-            <small class="text-muted"> * 500자 이하 작성</small>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
+            <h4 class="mb-3"> 지원서 작성 </h4>
 
-            <label for="cc-name" class="form-label my-3">2. 수강 후, 기대하는 나의 모습</label>
-            <small class="text-muted"> * 500자 이하 작성</small>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
+            <div class="my-1">
+              <label for="cc-name" class="form-label my-3">1. 지원 동기</label>
+              <small class="text-muted"> * 500자 이하 작성</small>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
 
-          <!-- <div class="form-check">
+              <label for="cc-name" class="form-label my-3">2. 수강 후, 기대하는 나의 모습</label>
+              <small class="text-muted"> * 500자 이하 작성</small>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
+
+              <!-- <div class="form-check">
               <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
               <label class="form-check-label" for="credit">Credit card</label>
             </div>
@@ -293,9 +256,9 @@
               <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
               <label class="form-check-label" for="paypal">PayPal</label>
             </div> -->
-          </div>
+            </div>
 
-          <!-- <div class="row gy-3">
+            <!-- <div class="row gy-3">
             <div class="col-md-6">
               <label for="cc-name" class="form-label">Name on card</label>
               <input type="text" class="form-control" id="cc-name" placeholder="" required>
@@ -329,70 +292,93 @@
               </div>
             </div>
           </div> -->
-          <hr class="my-4">
-          
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="same-address">
-            <label class="form-check-label" for="same-address">개인정보 이용에 동의합니다.</label>
+            <hr class="my-4">
+
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" name="checkTmp" id="checkbox1" value="Y" />
+              <label class="form-check-label" for="checkbox1">개인정보 이용에 동의합니다.(필수)</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" name="checkTmp" id="checkbox2" value="Y" />
+              <label class="form-check-label" for="checkbox2">연락 없이 면접 No-Show시, 추후 유클리드소프트에서 진행하는
+                모든 교육과 혜택을 받지 못합니다.(필수)</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" name="checkTmp" id="checkAll" value="Y" />
+              <label class="form-check-label" for="checkAll"> 모두 확인했습니다. </label>
+            </div>
+
+
+            <hr class="my-4">
+          </form>
+          <button class="w-100 btn btn-primary btn-lg" type="submit" data-bs-toggle="modal"
+            data-bs-target="#exampleModal" id="next" disabled onclick="fnSubmit();">
+            제출하기
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">신청 완료</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                </div>
+                <div class="modal-body">
+                  제출 후, 수정이 어렵습니다. 정말 제출하시겠습니까?
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                  <button type="button" class="btn btn-primary" onclick="location.href='finish';"> 제출</button>
+                </div>
+              </div>
+            </div>
           </div>
+          <footer class="my-5 pt-5 text-muted text-center text-small">
+            <ul class="list-inline">
+              <li class="list-inline-item"><a href="#">메인 페이지</a></li>
+              <li class="list-inline-item"><a href="#">Euclidsoft</a></li>
+              <li class="list-inline-item"><a href="#">Contact</a></li>
+            </ul>
+            <p class="mb-1">&copy; (주)유클리드소프트 혁신역량교육팀 ☎️ 042-335-6589 ✉️ euclidsoft.edu@gmail.com </p>
 
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="save-info">
-            <label class="form-check-label" for="save-info">연락 없이 면접 No-Show시, 추후 유클리드소프트에서 진행하는 모든 교육과 혜택을 받지 못합니다.</label>
-          </div>
+          </footer>
+        </div>
+      </div>
+    </main>
 
-          <hr class="my-4">
-          <!-- <button class="w-45 btn btn-warning btn-lg" type="submit">돌아가기</button> -->
-          <!-- <button class="w-100 btn btn-primary btn-lg" type="submit">제출하기</button> -->
-          
-        </form>
-        <!-- Button trigger modal -->
-<button class="w-100 btn btn-primary btn-lg" type="submit"" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  제출하기
-</button>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">신청 완료</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
-      </div>
-      <div class="modal-body">
-        제출 후, 수정이 어렵습니다. 정말 제출하시겠습니까?
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
-        <button type="button" class="btn btn-primary" onclick="location.href='finish';"> 제출</button>
-      </div>
-    </div>
+
   </div>
-</div>
-<footer class="my-5 pt-5 text-muted text-center text-small">
-  <ul class="list-inline">
-    <li class="list-inline-item"><a href="#">메인 페이지</a></li>
-    <li class="list-inline-item"><a href="#">Euclidsoft</a></li>
-    <li class="list-inline-item"><a href="#">Contact</a></li>
-  </ul>
-  <p class="mb-1">&copy; (주)유클리드소프트 혁신역량교육팀 ☎️ 042-335-6589 ✉️ euclidsoft.edu@gmail.com </p>
+  <script>
 
-</footer>
-      </div>
-    </div>
-  </main>
+    const myModal = document.getElementById('myModal')
+    const myInput = document.getElementById('myInput')
 
+    $('#myModal').on('shown.bs.modal', function () {
+      $('#myInput').trigger('focus')
+    })
+    // 전체 선택에 따른 하위 체크박스(checkTmp)의 활성/비활성화 여부 
+    $('#checkAll').change(function () {
+      var checked = $(this).prop('checked');
+      $('input[name="checkTmp"]').prop('checked', checked);
 
-
-</div>
-<script>
-const myModal = document.getElementById('myModal')
-const myInput = document.getElementById('myInput')
-
-myModal.addEventListener('shown.bs.modal', () => {
-  myInput.focus()
-})
-</script>
-  </body>
+    });
+    $('input[name="checkTmp"]').change(function () {
+      var tmpLength = $('input[name="checkTmp"]').length;
+      var checkedLength = $('input[name="checkTmp"]:checked').length;
+      var selectAll = (tmpLength == checkedLength);
+      $('#checkAll').prop('checked', selectAll);
+      selectAll ? $('#next').removeAttr('disabled') : $('#next').attr('disabled', 'disabled');
+    });
+    // 전체선택 checkbox의 상태에 따라 id = next 값을 가진 버튼의 비활성화를 적용/해제
+    $('#checkAll').change(function () {
+      // #checkAll 의 값이 true 인 경우 $('#next').removeAttr('disabled')
+      // #checkAll 의 값이 false 인 경우 $('#next').attr('disabled','disabled'); 이 적용됨.
+      $(this).prop('checked') ? $('#next').removeAttr('disabled') : $('#next').attr('disabled', 'disabled');
+    });   
+  </script>
+</body>
 
 </html>
