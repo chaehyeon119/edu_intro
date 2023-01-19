@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 import os
 from pathlib import Path
+import pymysql
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -77,10 +78,19 @@ WSGI_APPLICATION = "edu_web.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+pymysql.install_as_MySQLdb()
+
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'register',
+        'USER': 'root',
+        'PASSWORD': '1234',
+        'HOST': 'localhost',
+        'PORT': '3306',
+        'OPTIONS': {
+            'init_command': 'SET sql_mode="STRICT_TRANS_TABLES"'
+        }
     }
 }
 

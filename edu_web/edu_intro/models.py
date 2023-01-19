@@ -1,6 +1,7 @@
 from django.db import models
 from django.conf import settings
 from embed_video.fields import EmbedVideoField
+import os
 
 # Create your models here.
 #글을 만들건데 어떤 형태가 있는지 틀을 잡아주는 과정
@@ -26,7 +27,6 @@ class intro(models.Model) :
         return self.title
         #return f'[{self.pk}][{self.title}]' 해당 포스트의 pk 값, 해당 포스트의 title 값
 
-
 class Student(models.Model) :
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=10)
@@ -34,6 +34,7 @@ class Student(models.Model) :
     birthday = models.CharField(max_length=10)
     email = models.CharField(max_length=100)
     phone = models.CharField(max_length=100)
+    city = models.CharField(max_length=100)
     sub_phone = models.CharField(max_length=100, null=True)
     school = models.CharField(max_length=200)
     school_etc = models.CharField(max_length=200 ,null=True)
@@ -74,4 +75,10 @@ class Student(models.Model) :
         return self.name
         #return f'[{self.pk}][{self.title}]' 해당 포스트의 pk 값, 해당 포스트의 title 값
         user
+
+class Document(models.Model):
+    attached = models.FileField('첨부 파일', upload_to='uploads/')
+
+    def get_filename(self):
+        return os.path.basename(self.attached.name)
 

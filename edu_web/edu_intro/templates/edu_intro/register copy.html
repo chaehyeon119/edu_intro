@@ -42,7 +42,7 @@
 </head>
 
 <body class="bg-light">
-  <form action="finish" method="POST">
+<form action = "{% url 'register' %}">
   <div class="container">
     <main>
       <div class="py-5 text-center">
@@ -72,7 +72,7 @@
             <div class="row g-3">
               <div class="col-md-5">
                 <label for="firstName" class="form-label" >이름</label>
-                <input type="text" class="form-control" id="firstName" placeholder="" value="" name="name" required>
+                <!-- <input type="text" class="form-control" id="firstName" placeholder="" value="1234" name="name" required> -->
               <div class="col-md-5">
                 <label for="firstName" class="form-label">생년월일</label>
                 <input type="text" class="form-control" id="firstName"  name="birthday" placeholder="" value="" required>
